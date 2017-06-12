@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WIPER</title>
+    <style media="screen">
+    body {
+      background: black;
+      color: white;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    canvas, video, img {
+      display: block;
+      margin: auto;
+      width: 384px;
+      height: 216px;
+      border: 0;
+    }
+
+    #back {
+      display: none;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin: 0;
+      text-align: center;
+    }
+
+    .cont {
+      display: flex;
+      height: 100vh;
+    }
+
+    .flex {
+      flex: 1 1 auto;
+      margin: auto;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <div class="flex">
+        <h1>Input</h1>
+        <video id="video" src="mp4/grimes.mp4"></video>
+      </div>
+      <div class="flex">
+        <h1>Processing</h1>
+        <canvas id="back"></canvas>
+        <canvas id="main"></canvas>
+      </div>
+      <div class="flex">
+        <h1>Output</h1>
+        <img id="canvasImg">
+      </div>
+    </div>
+    <script src="src/wiper.js"></script>
+  </body>
+</html>
